@@ -12,7 +12,7 @@ DEFAULT_OUT_DIR = "out"
 def main():
     in_dp = input("input directory: ")
     out_dp = input("output directory [{}]: ".format(DEFAULT_OUT_DIR))
-    out_dp = out_dp if out_dp else DEFAULT_OUT_DIR
+    out_dp = out_dp or DEFAULT_OUT_DIR
     os.mkdir(out_dp)
     path = pathlib.Path(in_dp)
     total = len(os.listdir(path))
