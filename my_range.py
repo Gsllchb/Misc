@@ -13,7 +13,7 @@ def my_range(*args) -> Iterator[int]:
     elif len(args) == 3:
         start, stop, step = args
     elif len(args) == 0:
-        raise TypeError("range expected 1 arguments, got 0")
+        raise TypeError("range expected 1 argument, got 0")
     else:
         raise TypeError("range expected at most 3 arguments, got {}".format(len(args)))
 
